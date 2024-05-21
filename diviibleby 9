@@ -1,0 +1,12 @@
+def find_divisible_by_9(n, m):
+    total = 0
+    for num in range(n, m + 1):
+        if num % 9 == 0:
+            # Add the number to the sum
+            total += num
+    return total
+n = int(input("Enter the lower bound: "))
+m = int(input("Enter the upper bound: "))
+
+result = find_divisible_by_9(n, m)
+print("Sum of integers divisible by 9 between", n, "and", m, "is:", result)
