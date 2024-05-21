@@ -1,0 +1,17 @@
+def fibonacci_reverse(n):
+    fib_sequence = [0, 1]  # Initialize Fibonacci sequence with first two terms
+    for i in range(2, n):
+        fib_sequence.append(fib_sequence[-1] + fib_sequence[-2])  # Add next Fibonacci number to the sequence
+    fib_sequence.reverse()  # Reverse the sequence
+    return fib_sequence
+def main():
+    n = int(input("Enter the number of terms in Fibonacci series: "))
+    if n <= 0:
+        print("Please enter a positive integer.")
+        return
+    reversed_fib = fibonacci_reverse(n)
+    print("First", n, "terms of Fibonacci series in reverse order:")
+    for term in reversed_fib:
+        print(term, end=" ")
+if __name__ == "__main__":
+    main()
