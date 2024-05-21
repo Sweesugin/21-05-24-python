@@ -1,0 +1,15 @@
+def prime_factors_product(num):
+    prime_factors = set()
+    divisor = 2
+    while num > 1:
+        while num % divisor == 0:
+            prime_factors.add(divisor)
+            num //= divisor
+        divisor += 1
+    product = 1
+    for factor in prime_factors:
+        product *= factor
+    return product
+num = int(input("Enter the number: "))
+result = prime_factors_product(num)
+print("Product is", result)
