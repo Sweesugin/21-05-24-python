@@ -1,0 +1,7 @@
+def print_square_of_stars(size):
+    for i in range(size):
+        for j in range(size):
+            print("*", end=" ")
+        print()
+size = int(input("Enter the size of the square: "))
+print_square_of_stars(size)
